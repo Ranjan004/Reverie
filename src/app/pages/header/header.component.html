@@ -1,0 +1,103 @@
+<section class="header border">
+    <div class="container">
+        <div class="grid align-items-center nav">
+            <div class="col-6 lg:col-2 md:col-4">
+                <div class="logo">
+                    <img src="../../../assets/logo/logo.svg" alt="">
+                </div>
+            </div>
+            <div class="col-6 lg:col-1 md:col-4 lg:col-offset-9 md:col-offset-0 sm:col-offset-3">
+                <div class="language_select">
+                    <div class="flex justify-content-end align-items-center">
+                        <p-button (click)="showDialog()" styleClass="language_icon">
+                            <ng-template pTemplate="content">
+                                <i class="pi pi-globe"></i>
+                                <span>EN</span>
+                            </ng-template>
+                        </p-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- modal section -->
+<div class="card flex justify-content-center">
+    <p-dialog closable="false" [modal]="true" [(visible)]="visible" [style]="{ width: '520px', height: '634px', border: '0px'}" [breakpoints]="{ '1199px': '520px', '520px': '90vw' }">
+        <div class="fluid-container">
+            <div class="main_heading">
+                <h2>Your Preferred Language</h2>
+            </div>
+            <p class="sub_text">Let us know which language you are most comfortable with. You can change it back anytime!</p>
+            <div class="grid my-3">
+                <div class="col-6">
+                    <div class="card-box flex justify-content-center align-items-center">
+                        <div class="selected_language">
+                            <span class="pi pi-check" [rounded]="true" pButton></span>
+                        </div>
+                        <div class="language_select">
+                            <div class="icons">
+                                <img src="../../../assets/icons/hindi.svg" alt="">
+                                <div class="text">
+                                    <h3>हिंदी</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card-box flex justify-content-center align-items-center">
+                        <div class="selected_language">
+                            <span class="pi pi-check" [rounded]="true" pButton></span>
+                        </div>
+                        <div class="language_select">
+                            <div class="icons">
+                                <img src="../../../assets/icons/tamil.svg" alt="">
+                                <div class="text">
+                                    <h3>தமிழ்</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card-box flex justify-content-center align-items-center">
+                        <div class="selected_language">
+                            <span class="pi pi-check" [rounded]="true" pButton></span>
+                        </div>
+                        <div class="language_select">
+                            <div class="icons">
+                                <img src="../../../assets/icons/marathi.svg" alt="">
+                                <div class="text">
+                                    <h3>मराठी</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card-box flex justify-content-center align-items-center active">
+                        <div class="selected_language">
+                            <span class="pi pi-check" [rounded]="true" pButton></span>
+                        </div>
+                        <div class="language_select">
+                            <div class="icons">
+                                <img src="../../../assets/icons/english.svg" alt="">
+                                <div class="text">
+                                    <h3>English</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit_btn mt-5">
+                <p-button label="Continue with English" (onClick)="closeDialog()" styleClass="p-3 w-full" pRipple class="w-full" styleClass="p-button-custom" />
+            </div>
+        </div>
+    </p-dialog>
+</div>

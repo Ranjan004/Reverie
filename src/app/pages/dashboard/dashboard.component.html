@@ -1,0 +1,168 @@
+<div class="dashboard">
+    <div class="container-fluid">
+        <div class="grid">
+            <div class="col-12 lg:col-2">
+                <div class="side_menu">
+                    <div class="menu">
+                        <ul>
+                            <li class="menu_item default" [routerLink]="['/dashboard']" routerLinkActive="active">
+                                    <div class="outer flex justify-content-between align-items-center">
+                                        <div class="inner flex align-items-center">
+                                            <i class="pi pi-home"></i>
+                                            <span>Home</span>
+                                        </div>
+                                        <span><i class="pi pi-angle-right"></i></span>
+                                    </div>
+                            </li>
+                            <li class="menu_item default" [routerLink]="['/payments']" routerLinkActive="active">
+                                    <div class="outer flex justify-content-between align-items-center">
+                                        <div class="inner flex align-items-center">
+                                            <i class="pi pi-arrow-right-arrow-left"></i>
+                                            <span>Payments</span>
+                                        </div>
+                                        <span><i class="pi pi-angle-right"></i></span>
+                                    </div>
+                            </li>
+                            <li class="menu_item default" [routerLink]="['/transactions']" routerLinkActive="active">
+                              
+                                    <div class="outer flex justify-content-between align-items-center">
+                                        <div class="inner flex align-items-center">
+                                            <i class="pi pi-copy"></i>
+                                            <span>Transactions</span>
+                                        </div>
+                                        <span><i class="pi pi-angle-right"></i></span>
+                                    </div>
+                             
+                            </li>
+
+
+                            <li class="menu_item default" (click)="toggleMenu()">
+                                <div class="outer flex justify-content-between align-items-center">
+                                    <div class="inner flex align-items-center">
+                                        <i class="pi pi-credit-card"></i>
+                                        <span>Cards</span>
+                                    </div>
+                                    <span><i class="pi pi-angle-right"></i></span>
+                                </div>
+                            </li>
+
+                            <li class="sub" [ngClass]="{'active_menu': isActive}">
+                                <div class="sub_cards">
+                                    <ul class="sub_menu">
+                                        <li class="sub_menu_items active" [routerLink]="['/cards']" routerLinkActive="active">
+                                         
+                                                <div class="outer flex justify-content-between align-items-center">
+                                                    <span>Credit Cards</span>
+                                                    <span><i class="pi pi-angle-right"></i></span>
+                                                </div>
+                                     
+                                        </li>
+                                        <li class="sub_menu_items">
+                                           
+                                                <div class="outer flex justify-content-between align-items-center">
+                                                    <span>Debit Cards</span>
+                                                    <span><i class="pi pi-angle-right"></i></span>
+                                                </div>
+                                         
+                                        </li>
+                                        <li class="sub_menu_items">
+        
+                                                <div class="outer flex justify-content-between align-items-center">
+                                                    <span>Forex Cards</span>
+                                                    <span><i class="pi pi-angle-right"></i></span>
+                                                </div>
+        
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_item">
+                                    <div class="inner flex align-items-center">
+                                        <i class="pi pi-indian-rupee"></i> <span>Loans</span>
+                                    </div>
+                            </li>
+                            <li class="menu_item">
+                                    <div class="inner flex align-items-center">
+                                        <i class="pi pi-user"></i> <span>Profile</span>
+                                    </div>
+                            </li>
+                            <li class="menu_item">
+                                    <div class="inner flex align-items-center">
+                                        <i class="pi pi-sign-out"></i> <span>Log Out</span>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cta_btn">
+                        <button pButton pRipple rounded="true"><i class="pi pi-file"></i>Go to Blogs</button>
+                        <button pButton pRipple rounded="true"><i class="pi pi-phone"></i>Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 lg:col-10">
+                <div class="dash_container">
+                    <div class="card">
+                        <p class="welcom_msg">Good Afternoon RAHUL, you last logged on 18 Jul 2024, 05:54 PM</p>
+                    </div>
+
+                    <div class="card_box">
+                        <div class="heading_dash">
+                            <h2>Your Summary</h2>
+                        </div>
+                        <div class="inner_box flex justify-content-between align-items-center">
+                            <div class="balance">
+                                <h5>Assets</h5>
+                            </div>
+                            <div class="check_balance">
+                                <i class="pi pi-eye"></i>
+                                <span>View Balance</span>
+                            </div>
+                        </div>
+                        <div class="inner_box flex justify-content-between align-items-center">
+                            <div class="balance">
+                                <h5>Liabilities</h5>
+                            </div>
+                            <div class="check_balance">
+                                <i class="pi pi-eye"></i>
+                                <span>View Balance</span>
+                            </div>
+                        </div>
+                        <div class="note_text">
+                            <p>Explore popular offers on payment through Credit Card, Debit Card, Net Banking and other modes</p>
+                        </div>
+                    </div>
+
+                    <div class="card_box">
+                        <div class="heading_dash">
+                            <h2>Your Recent Transactions</h2>
+                        </div>
+                        <div class="flex justify-content-center align-items-center">
+                            <div class="not_found">
+                                <div class="not_found_icon">
+                                    <img src="../../../assets/icons/ruppess.svg" alt=""></div>
+                                <div class="not_found_msg">
+                                    <p>Sorry! No transactions found between selected dates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card_box">
+                        <div class="heading_dash">
+                            <h2>Your Accounts</h2>
+                        </div>
+                        <div class="account_details">
+                            <h5>Current Account</h5>
+                            <p>1234567890 ABC PVT. LTD</p>
+                            <p>IFSC RF12345678</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

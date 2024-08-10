@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+<section class="login_page">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12 md:col-6 lg:col-5">
+                <div class="sub_heading">
+                    <h4>Sign in to </h4>
+                </div>
+                <div class="main_heading">
+                    <h1>Sign in to Experience Your World with Reverie!</h1>
+                </div>
+                <p class="sub_text mt-2">Welcome! Please enter your details below.</p>
+                <div class="login_form">
+                    <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+                        <div class="grid">
+                            <div class="col-12 md:col-6 lg:col-6">
+                                <div class="flex flex-column gap-2">
+                                    <label for="Username">Username*</label>
+                                    <input type="text" pInputText formControlName="Username" [ngClass]="{'ng-invalid ng-dirty': submitted && loginform.get('Username')?.invalid}" placeholder="Your Full Name" />
+                                    <small *ngIf="submitted && loginform.get('Username')?.invalid" class="p-error">
+                            Username is required.
+                          </small>
+                                </div>
+                            </div>
+
+                            <div class="col-12 md:col-6 lg:col-6">
+                                <div class="flex flex-column gap-2">
+                                    <label for="company">Company*</label>
+                                    <input formControlName="company" pInputText id="company" aria-describedby="company-help" placeholder="Your Company" [ngClass]="{'ng-invalid ng-dirty': submitted && loginform.get('company')?.invalid}" />
+                                    <small *ngIf="submitted && loginform.get('company')?.invalid" class="p-error">
+                            Company is required.
+                          </small>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="flex flex-column gap-2">
+                                    <label for="phone">Phone Number*</label>
+                                    <input formControlName="phone" pInputText id="phone" aria-describedby="phone-help" placeholder="Your Phone Number" [ngClass]="{'ng-invalid ng-dirty': submitted && loginform.get('phone')?.invalid}" />
+                                    <small *ngIf="submitted && loginform.get('phone')?.invalid" class="p-error">
+                            Phone number is required.
+                          </small>
+                                    <small id="phone-help">(OTP for verification will be sent on this Phone Number)</small>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="flex flex-column gap-2">
+                                    <label for="email">Email*</label>
+                                    <input name="email" pInputText id="email" aria-describedby="email-help" formControlName="email" placeholder="Your Email" [ngClass]="{'ng-invalid ng-dirty': submitted && loginform.get('email')?.invalid}" />
+                                    <small *ngIf="submitted && loginform.get('email')?.invalid" class="p-error">
+                            Email is required and must be a valid email address.
+                          </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit_btn mt-5">
+                            <p-button type="submit" label="Next" styleClass="p-3 w-full p-button-custom" pRipple class="w-full" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-12 md:col-6 lg:col-7">
+                <div class="banner_img">
+                    <img src="../../../assets/images/Frame 10715.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+<div class="main">
+    <div class="dashboard_header">
+        <div class="fluid-container">
+            <div class="grid align-items-center">
+                <div class="col-6 lg:col-2 md:col-4">
+                    <div class="dash_logo">
+                        <img src="../../../assets/logo/dash.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-6 lg:col-9 md:col-4 col">
+                    <div class="dash_search">
+                        <p-inputGroup>
+                            <button type="button" pButton icon="pi pi-search" class="border-right" styleClass="search_icon"></button>
+                            <input type="text" pInputText placeholder="Search for “My Transactions”" styleClass="search" />
+                            <button type="button" pButton icon="pi pi-microphone" class="p-button-warning" styleClass="mic_icon"></button>
+                        </p-inputGroup>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="language_select">
+                        <div class="flex justify-content-end align-items-center">
+                            <p-button styleClass="language_icon">
+                                <ng-template pTemplate="content">
+                                    <i class="pi pi-globe"></i>
+                                    <span>English</span>
+                                </ng-template>
+                            </p-button>
+                            <div class="user_icon">
+                                <img src="../../../assets/icons/user.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<router-outlet/>

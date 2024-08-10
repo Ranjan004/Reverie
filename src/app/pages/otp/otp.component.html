@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<section class="otp_pages">
+    <div class="container">
+        <div class="grid align-items-center">
+            <div class="col-12 md:col-6 lg:col-5">
+                <div class="main_heading">
+                    <h1>You are almost there!</h1>
+                </div>
+                <p class="sub_text mt-2">Enter the code we have sent via Phone Number {{phoneNumber}}</p>
+                <div class="login_form">
+                    <form (ngSubmit)="submitOtp()">
+                        <div class="flex otp mt-5">
+                            <p-inputOtp [(ngModel)]="otpData" name="otp" (ngModelChange)="checkOtpComplete()" />
+                        </div>
+                        <p class="sub_text_heading mt-2">
+                            Didn’t receive the code?
+                            <span>
+                            <p-button
+                                [label]="resendLabel"
+                                [text]="true"
+                                (onClick)="resendOtp()"
+                                styleClass="otp_text"
+                            />
+                        </span>
+                        </p>
+                        <div class="submit_btn mt-5">
+                            <button pRipple [ngClass]="{'btn-active': isOtpComplete, 'btn-inactive': !isOtpComplete}" [disabled]="!isOtpComplete">
+                            Sign In
+                        </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-12 md:col-6 lg:col-7">
+                <div class="banner_img">
+                    <img src="../../../assets/images/Frame 10715.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card flex justify-content-center">
+        <p-toast [life]="2000" styleClass="toast" />
+    </div>
+</section>

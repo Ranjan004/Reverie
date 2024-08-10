@@ -1,0 +1,77 @@
+.container {
+    padding: 50px 0
+}
+
+.sub_heading h4 {
+    font-size: 14px;
+    line-height: 42px;
+    letter-spacing: -1px;
+    color: var(--primary-text);
+    font-family: "reverieFont";
+}
+
+.login_form {
+    margin-top: 30px
+}
+
+.login_form label {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--primary-text);
+    font-family: "reverieFonts";
+}
+
+.login_form input {
+    min-height: 44px;
+    padding: 0px 8px 2px 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--primary-text);
+    font-family: "reverieFonts";
+}
+
+small {
+    font-size: 10px
+}
+
+.login_form input {
+    min-height: 44px;
+    padding: 0px 8px 2px 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--primary-text);
+    font-family: "reverieFonts";
+}
+
+small {
+    font-size: 10px
+}
+
+.submit_btn button {
+    width: 100%;
+    height: 57px;
+    border-radius: 30px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-family: "reverieFonts";
+}
+
+:host ::ng-deep .p-button-custom {
+    width: 100%;
+    height: 57px;
+    border-radius: 30px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-family: "reverieFonts";
+    box-shadow: none;
+}

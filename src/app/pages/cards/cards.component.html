@@ -1,0 +1,310 @@
+<div class="dashboard">
+    <div class="container-fluid">
+        <div class="grid">
+            <div class="col-12 lg:col-2">
+                <div class="side_menu">
+                    <div class="menu">
+                        <ul>
+                            <li class="menu_item default" [routerLink]="['/dashboard']" routerLinkActive="active">
+                                    <div class="outer flex justify-content-between align-items-center">
+                                        <div class="inner flex align-items-center">
+                                            <i class="pi pi-home"></i>
+                                            <span>Home</span>
+                                        </div>
+                                        <span><i class="pi pi-angle-right"></i></span>
+                                    </div>
+                            </li>
+                            <li class="menu_item default" [routerLink]="['/payments']" routerLinkActive="active">
+                                    <div class="outer flex justify-content-between align-items-center">
+                                        <div class="inner flex align-items-center">
+                                            <i class="pi pi-arrow-right-arrow-left"></i>
+                                            <span>Payments</span>
+                                        </div>
+                                        <span><i class="pi pi-angle-right"></i></span>
+                                    </div>
+                            </li>
+                            <li class="menu_item default" [routerLink]="['/transactions']" routerLinkActive="active">
+                              
+                                    <div class="outer flex justify-content-between align-items-center">
+                                        <div class="inner flex align-items-center">
+                                            <i class="pi pi-copy"></i>
+                                            <span>Transactions</span>
+                                        </div>
+                                        <span><i class="pi pi-angle-right"></i></span>
+                                    </div>
+                             
+                            </li>
+
+
+                            <li class="menu_item default" (click)="toggleMenu()">
+                                <div class="outer flex justify-content-between align-items-center">
+                                    <div class="inner flex align-items-center">
+                                        <i class="pi pi-credit-card"></i>
+                                        <span>Cards</span>
+                                    </div>
+                                    <span><i class="pi pi-angle-right"></i></span>
+                                </div>
+                            </li>
+
+                            <li class="sub" [ngClass]="{'active_menu': isActive}">
+                                <div class="sub_cards">
+                                    <ul class="sub_menu">
+                                        <li class="sub_menu_items active" [routerLink]="['/cards']" routerLinkActive="active">
+                                         
+                                                <div class="outer flex justify-content-between align-items-center">
+                                                    <span>Credit Cards</span>
+                                                    <span><i class="pi pi-angle-right"></i></span>
+                                                </div>
+                                     
+                                        </li>
+                                        <li class="sub_menu_items">
+                                           
+                                                <div class="outer flex justify-content-between align-items-center">
+                                                    <span>Debit Cards</span>
+                                                    <span><i class="pi pi-angle-right"></i></span>
+                                                </div>
+                                         
+                                        </li>
+                                        <li class="sub_menu_items">
+        
+                                                <div class="outer flex justify-content-between align-items-center">
+                                                    <span>Forex Cards</span>
+                                                    <span><i class="pi pi-angle-right"></i></span>
+                                                </div>
+        
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu_item">
+                                    <div class="inner flex align-items-center">
+                                        <i class="pi pi-indian-rupee"></i> <span>Loans</span>
+                                    </div>
+                            </li>
+                            <li class="menu_item">
+                                    <div class="inner flex align-items-center">
+                                        <i class="pi pi-user"></i> <span>Profile</span>
+                                    </div>
+                            </li>
+                            <li class="menu_item">
+                                    <div class="inner flex align-items-center">
+                                        <i class="pi pi-sign-out"></i> <span>Log Out</span>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cta_btn">
+                        <button pButton pRipple rounded="true"><i class="pi pi-file"></i>Go to Blogs</button>
+                        <button pButton pRipple rounded="true"><i class="pi pi-phone"></i>Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 lg:col-10">
+                <div class="dash_container">
+                    <div class="card_box">
+                        <div class="heading_dash">
+                            <h2>Credit Cards</h2>
+                        </div>
+                        <div class="card_info">
+                            <p-tabView>
+
+                                <p-tabPanel header="Apply Now">
+                                    <ng-template pTemplate="content">
+                                        <div class="tab_content">
+                                            <div class="grid">
+                                                <div class="col-5">
+                                                    <div class="card_list">
+
+
+                                                        <ul class="list-none line_v">
+                                                            <li>
+                                                                <div class="flex align-items-center card_margin">
+                                                                    <div class="card_img">
+                                                                        <img src="../../../assets/icons/card.svg" alt="">
+                                                                    </div>
+                                                                    <h3 class="card_title">Get your Credit Card in 4 Simple Steps</h3>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="flex align-items-center number_round open" (click)="cardFrom=false">
+                                                                    <span>1</span>
+                                                                    <p>Necessary information to get you started</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="flex align-items-center number_round" (click)="cardFrom=true">
+                                                                    <span>2</span>
+                                                                    <p>Personalise your Credit Card</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="flex align-items-center number_round">
+                                                                    <span>3</span>
+                                                                    <p>Additional information</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="flex align-items-center number_round">
+                                                                    <span>4</span>
+                                                                    <p>Verification & Open Credit Card</p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 p-0">
+                                                    <div class="voice_form">
+                                                        <div class="line_v"></div>
+                                                        <div class="form_heading mb-5">
+                                                            <h3>Let’s begin with some necessary information and get you started</h3>
+                                                        </div>
+                                                        <div class="voice_btn"><button pButton pRipple><i class="pi pi-microphone"></i>Fill with Voice</button></div>
+
+
+                                                        @if(cardFrom){
+                                                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                                                            <div class="grid mt-5">
+                                                                <div class="lg:col-12 col-6">
+                                                                    <div class="flex flex-column gap-2">
+                                                                        <label for="aadhaar">Enter mobile number linked with Aadhaar</label>
+                                                                        <input type="text" pInputText formControlName="aadhaar" [ngClass]="{'ng-invalid ng-dirty': submitted && loginForm.get('aadhaar')?.invalid}" placeholder="Enter you Number" />
+                                                                        <small id="phone-help">(OTP for verification will be sent to this mobile number)</small>
+                                                                        <small *ngIf="submitted && loginForm.get('aadhaar')?.invalid" class="p-error">
+                                                                          Aadhaar is required.
+                                                                        </small>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="lg:col-12 col-6">
+                                                                    <div class="flex flex-column gap-2">
+                                                                        <label for="pancard">Enter Permanent Account Number(PAN)</label>
+                                                                        <input type="text" pInputText formControlName="pancard" [ngClass]="{'ng-invalid ng-dirty': submitted && loginForm.get('pancard')?.invalid}" placeholder="Enter you Number" />
+
+                                                                        <small *ngIf="submitted && loginForm.get('pancard')?.invalid" class="p-error">
+                                                                          Pancard is required.
+                                                                      </small>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="lg:col-12 col-6">
+                                                                    <div class="flex flex-column gap-2">
+                                                                        <label for="dob">Enter Date of Birth</label>
+                                                                        <input type="text" pInputText formControlName="pancard" [ngClass]="{'ng-invalid ng-dirty': submitted && loginForm.get('pancard')?.invalid}" placeholder="00/00/00" />
+                                                                        <!--
+                                                                        <p-calendar [(ngModel)]="date" placeholder="00/00/00" class="w-full" /> -->
+
+                                                                        <small *ngIf="submitted && loginForm.get('pancard')?.invalid" class="p-error">
+                                                                        Date of Birth is required.
+                                                                    </small>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="voice_btn_submit"><button pButton pRipple>Next</button></div>
+
+                                                        </form>
+                                                        } @else {
+                                                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                                                            <div class="grid mt-5">
+                                                                <div class="lg:col-12 col-6">
+                                                                    <div class="flex flex-column gap-2">
+                                                                        <label for="aadhaar">Organisation Name</label>
+                                                                        <input type="text" pInputText formControlName="aadhaar" [ngClass]="{'ng-invalid ng-dirty': submitted && loginForm.get('aadhaar')?.invalid}" placeholder="Your Organisation" />
+                                                                        <small *ngIf="submitted && loginForm.get('aadhaar')?.invalid" class="p-error">
+                                                                          Your Organisation is required.
+                                                                      </small>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="lg:col-12 col-6">
+                                                                    <div class="flex flex-column gap-2">
+                                                                        <label for="pancard">Office E-mail Address *</label>
+                                                                        <input type="text" pInputText formControlName="pancard" [ngClass]="{'ng-invalid ng-dirty': submitted && loginForm.get('pancard')?.invalid}" placeholder="Email Address" />
+
+                                                                        <small *ngIf="submitted && loginForm.get('pancard')?.invalid" class="p-error">
+                                                                          Email Address is required.
+                                                                    </small>
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                <div class="lg:col-12 col-6">
+                                                                    <div class="flex flex-column gap-2">
+                                                                        <label for="dob">Enter Date of Birth</label>
+                                                                        <p-dropdown [options]="banks" [(ngModel)]="selectedBank" optionLabel="name" placeholder="Select a City" />
+
+                                                                        <small id="phone-help"> (Select the bank name where your salary is being credited)</small>
+                                                                        <small *ngIf="submitted && loginForm.get('pancard')?.invalid" class="p-error">
+                                                                     
+                                                              </small>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="voice_btn_submit"><button pButton pRipple>Next</button></div>
+
+                                                        </form>
+                                                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </p-tabPanel>
+
+
+                                <p-tabPanel header="Benefits">
+                                    <p>
+                                        Coming Soon..
+                                    </p>
+                                </p-tabPanel>
+
+
+                                <p-tabPanel header="Pre-Approved">
+                                    <p>
+                                        Coming Soon..
+                                    </p>
+                                </p-tabPanel>
+
+
+                                <p-tabPanel header="FAQs">
+                                    <p>
+                                        Coming Soon..
+                                    </p>
+                                </p-tabPanel>
+
+                                <p-tabPanel header="More">
+                                    <p>
+                                        Coming Soon..
+                                    </p>
+                                </p-tabPanel>
+
+
+
+                            </p-tabView>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+<div class="dashboard">
+  <div class="container-fluid">
+      <div class="grid">
+          <div class="col-12 lg:col-2">
+              <div class="side_menu">
+                  <div class="menu">
+                      <ul>
+                          <li class="menu_item default" [routerLink]="['/dashboard']" routerLinkActive="active">
+                                  <div class="outer flex justify-content-between align-items-center">
+                                      <div class="inner flex align-items-center">
+                                          <i class="pi pi-home"></i>
+                                          <span>Home</span>
+                                      </div>
+                                      <span><i class="pi pi-angle-right"></i></span>
+                                  </div>
+                          </li>
+                          <li class="menu_item default" [routerLink]="['/payments']" routerLinkActive="active">
+                                  <div class="outer flex justify-content-between align-items-center">
+                                      <div class="inner flex align-items-center">
+                                          <i class="pi pi-arrow-right-arrow-left"></i>
+                                          <span>Payments</span>
+                                      </div>
+                                      <span><i class="pi pi-angle-right"></i></span>
+                                  </div>
+                          </li>
+                          <li class="menu_item default" [routerLink]="['/transactions']" routerLinkActive="active">
+                            
+                                  <div class="outer flex justify-content-between align-items-center">
+                                      <div class="inner flex align-items-center">
+                                          <i class="pi pi-copy"></i>
+                                          <span>Transactions</span>
+                                      </div>
+                                      <span><i class="pi pi-angle-right"></i></span>
+                                  </div>
+                           
+                          </li>
+
+
+                          <li class="menu_item default" (click)="toggleMenu()">
+                              <div class="outer flex justify-content-between align-items-center">
+                                  <div class="inner flex align-items-center">
+                                      <i class="pi pi-credit-card"></i>
+                                      <span>Cards</span>
+                                  </div>
+                                  <span><i class="pi pi-angle-right"></i></span>
+                              </div>
+                          </li>
+
+                          <li class="sub" [ngClass]="{'active_menu': isActive}">
+                              <div class="sub_cards">
+                                  <ul class="sub_menu">
+                                      <li class="sub_menu_items active" [routerLink]="['/cards']" routerLinkActive="active">
+                                       
+                                              <div class="outer flex justify-content-between align-items-center">
+                                                  <span>Credit Cards</span>
+                                                  <span><i class="pi pi-angle-right"></i></span>
+                                              </div>
+                                   
+                                      </li>
+                                      <li class="sub_menu_items">
+                                         
+                                              <div class="outer flex justify-content-between align-items-center">
+                                                  <span>Debit Cards</span>
+                                                  <span><i class="pi pi-angle-right"></i></span>
+                                              </div>
+                                       
+                                      </li>
+                                      <li class="sub_menu_items">
+      
+                                              <div class="outer flex justify-content-between align-items-center">
+                                                  <span>Forex Cards</span>
+                                                  <span><i class="pi pi-angle-right"></i></span>
+                                              </div>
+      
+                                      </li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li class="menu_item">
+                                  <div class="inner flex align-items-center">
+                                      <i class="pi pi-indian-rupee"></i> <span>Loans</span>
+                                  </div>
+                          </li>
+                          <li class="menu_item">
+                                  <div class="inner flex align-items-center">
+                                      <i class="pi pi-user"></i> <span>Profile</span>
+                                  </div>
+                          </li>
+                          <li class="menu_item">
+                                  <div class="inner flex align-items-center">
+                                      <i class="pi pi-sign-out"></i> <span>Log Out</span>
+                                  </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="cta_btn">
+                      <button pButton pRipple rounded="true"><i class="pi pi-file"></i>Go to Blogs</button>
+                      <button pButton pRipple rounded="true"><i class="pi pi-phone"></i>Contact Us</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-12 lg:col-10">
+              <div class="dash_container">
+                  <div class="card_box">
+                      <div class="heading_dash flex justify-content-between align-items-center">
+                          <h2>Your Transactions</h2>
+                          <button pButton pRipple><i class="pi pi-download"></i>Download PDF</button>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

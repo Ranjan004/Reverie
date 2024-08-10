@@ -1,0 +1,249 @@
+.side_menu {
+    background-color: var(--white);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-right: 1px solid var(--border);
+    position: relative;
+    padding-top: 25px;
+}
+
+.menu_item {
+    list-style: none;
+    padding: 13px 16px 13px 35px;
+    color: var(--menu);
+    cursor: pointer;
+}
+
+.menu_item i {
+    font-size: 20px;
+    padding: 0 10px 0 0px;
+}
+
+.menu_item span {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.menu_item.default {
+    color: var(--primary);
+}
+
+.menu_item.default.active {
+    color: #000;
+    background-color: #FDE7E8;
+}
+
+.menu_item:hover {
+    color: #000;
+    background-color: #FDE7E8;
+}
+
+.col-12 {
+    padding: 0
+}
+
+:host ::ng-deep .cta_btn button {
+    width: 100%;
+    height: 57px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    background: #ED1C23;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0
+}
+
+:host ::ng-deep .heading_dash button {
+    width: 176px;
+    height: 48px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    background: #ED1C23;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+:host ::ng-deep .cta_btn button:focus {
+    box-shadow: none;
+}
+
+:host ::ng-deep .heading_dash button:focus {
+    box-shadow: none;
+}
+
+.cta_btn {
+    padding: 13px 16px 13px 35px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+
+.cta_btn button i {
+    margin-right: 10px;
+}
+
+.dash_container {
+    background: #f9f8f8;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    font-family: "Inter", sans-serif;
+    padding: 5px 35px;
+    padding-bottom: 100px
+}
+
+.welcom_msg {
+    font-size: 16px;
+    font-size: 500;
+    line-height: 24px;
+    color: var(--grey);
+}
+
+.inner_box {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.balance h5 {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.check_balance {
+    font-size: 14px;
+    color: #003874;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.check_balance i {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.note_text {
+    padding: 10px 0;
+}
+
+.note_text p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 26px;
+    color: var(--grey);
+}
+
+.not_found {
+    padding: 50px 0
+}
+
+.not_found_msg p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 26px;
+    color: var(--grey);
+}
+
+.not_found_icon {
+    width: 100%;
+    text-align: center;
+}
+
+.not_found_icon img {
+    width: 53px;
+    height: 53px;
+}
+
+.account_details {
+    padding-bottom: 25px;
+}
+
+.account_details h5 {
+    font-size: 14px;
+    line-height: 35px;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.account_details p {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--grey);
+}
+
+.transactions_data {
+    margin: 30px 0
+}
+
+th {
+    font-size: 14px;
+    line-height: 26px;
+    color: #001933;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+tr {
+    height: 56px;
+}
+
+th,
+td {
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #001933;
+    font-family: "Inter", sans-serif;
+}
+
+th,
+td {
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #001933;
+    font-family: "Inter", sans-serif;
+}
+
+.sub_menu_items {
+    list-style: none;
+    padding: 13px 16px 13px 55px;
+    color: var(--menu);
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--black)
+}
+
+.sub_menu_items span {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.sub_menu_items i {
+    font-size: 20px;
+    padding: 0 10px 0 0px;
+}
+
+.sub {
+    display: none;
+}
+
+.sub.active_menu {
+    display: block;
+}
+
+.sub {
+    padding: 0px 0px 0px 5px;
+}

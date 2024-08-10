@@ -1,0 +1,76 @@
+.dashboard_header {
+    height: 78px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    display: grid;
+    align-items: center;
+}
+
+:host ::ng-deep .p-inputtext {
+    height: 48px;
+    border-color: #CBD5E1;
+    border-left: none;
+    border-right: none;
+}
+
+:host ::ng-deep button {
+    border-color: #CBD5E1;
+    color: var(--grey);
+    font-size: 16px;
+}
+
+:host ::ng-deep .p-inputtext:enabled:focus {
+    box-shadow: none;
+}
+
+:host ::ng-deep button:nth-child(1) {
+    border-right: none;
+    background: none;
+}
+
+:host ::ng-deep .dash_search .pi-microphone {
+    width: 36px;
+    height: 36px;
+    background: #FDE7E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-size: 20px;
+}
+
+:host ::ng-deep .p-button.p-button-warning {
+    border-left: none;
+    background: none;
+    color: var(--red);
+}
+
+:host ::ng-deep .language_icon {
+    background: #FDE7E8!important;
+    width: 93px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #FDE7E8;
+    color: var(--red)
+}
+
+.language_select span {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.user_icon {
+    width: 32px;
+    height: 32px;
+    margin: 3px 0px 0px 5px;
+}
+
+.col {
+    max-width: 72%!important;
+}
